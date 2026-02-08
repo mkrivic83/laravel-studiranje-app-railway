@@ -4,6 +4,12 @@
 node_modules
 vendor
 
+# Laravel runtime – OK ignorirati
+storage/logs
+storage/app
+
+# ⛔ KLJUČNO: sprječava symlink loop
+public/storage
 
 .env
 .env.*
