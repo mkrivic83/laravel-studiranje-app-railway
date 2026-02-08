@@ -64,19 +64,19 @@ class StudentController extends Controller
 
         Student::create($validated);
 
-        return redirect()->route('studenti.index')->with('uspjeh', 'Student je uspješno dodan.');
+        return redirect()->route('students.index')->with('uspjeh', 'Student je uspješno dodan.');
     }
 
     public function show(Student $student)
     {
         $student->load('fakultet');
-        return view('studenti.show', compact('student'));
+        return view('students.show', compact('student'));
     }
 
     public function edit(Student $student)
     {
         $fakulteti = Fakultet::orderBy('naziv')->get();
-        return view('studenti.edit', compact('student', 'fakulteti'));
+        return view('students.edit', compact('student', 'fakulteti'));
     }
 
     public function update(Request $request, Student $student)
@@ -93,12 +93,12 @@ class StudentController extends Controller
 
         $student->update($validated);
 
-        return redirect()->route('studenti.index')->with('uspjeh', 'Student je uspješno ažuriran.');
+        return redirect()->route('students.index')->with('uspjeh', 'Student je uspješno ažuriran.');
     }
 
     public function destroy(Student $student)
     {
         $student->delete();
-        return redirect()->route('studenti.index')->with('uspjeh', 'Student je obrisan.');
+        return redirect()->route('students.index')->with('uspjeh', 'Student je obrisan.');
     }
 }

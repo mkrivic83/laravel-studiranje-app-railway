@@ -35,9 +35,9 @@
       <td>{{ $s->mjesto }}</td>
       <td>{{ $s->fakultet?->naziv }}</td>
       <td>
-        <a href="{{ route('studenti.show', $s) }}">Prikaži</a> |
-        <a href="{{ route('studenti.edit', $s) }}">Uredi</a> |
-        <form action="{{ route('studenti.destroy', $s) }}" method="POST" style="display:inline;">
+        <a href="{{ route('students.show', $s) }}">Prikaži</a> |
+        <a href="{{ route('students.edit', $s) }}">Uredi</a> |
+        <form action="{{ route('students.destroy', $s) }}" method="POST" style="display:inline;">
           @csrf
           @method('DELETE')
           <button type="submit" onclick="return confirm('Obrisati?')">Obriši</button>
