@@ -27,7 +27,7 @@ class StudentController extends Controller
     $total = Student::whereNotNull('mjesto')->count();
 
     // studenti za trenutnu stranicu
-    $studenti = Student::with('fakultet')
+    $students = Student::with('fakultet')
     //->whereNotNull('mjesto')
         ->orderBy('prezime')
         ->limit($perPage)
@@ -37,8 +37,8 @@ class StudentController extends Controller
     // ukupan broj stranica
     $totalPages = (int) ceil($total / $perPage);
 
-    return view('studenti.index', compact(
-        'studenti',
+    return view('students.index', compact(
+        'students',
         'page',
         'totalPages'
     ));

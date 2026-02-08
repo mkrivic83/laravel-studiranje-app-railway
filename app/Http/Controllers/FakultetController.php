@@ -8,7 +8,7 @@ class FakultetController extends Controller
 {
     public function index()
     {
-        $fakulteti = Fakultet::orderBy('naziv')->get();
-        return view('fakulteti.index', compact('fakulteti'));
+        $fakultets = Fakultet::orderBy('naziv')->get();
+        return view('fakultets.index', compact('fakultets'));
     }
 }

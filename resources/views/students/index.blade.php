@@ -9,7 +9,7 @@
   <div class="uspjeh">{{ session('uspjeh') }}</div>
 @endif
 
-<a class="btn" href="{{ route('studenti.create') }}">+ Novi student</a>
+<a class="btn" href="{{ route('students.create') }}">+ Novi student</a>
 
 <table style="margin-top: 1rem;">
   <tr>
