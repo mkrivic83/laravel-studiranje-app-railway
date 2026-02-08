@@ -1,15 +1,18 @@
 .git
 .gitignore
 
-node_modules
-vendor
+**/node_modules
+**/vendor
 
-# Laravel runtime – OK ignorirati
+# Laravel runtime
 storage/logs
 storage/app
 
-# ⛔ KLJUČNO: sprječava symlink loop
+# Symlink safety
 public/storage
+
+# Build artefacts
+bootstrap/cache
 
 .env
 .env.*
