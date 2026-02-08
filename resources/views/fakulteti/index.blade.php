@@ -12,7 +12,7 @@
     <th>Mjesto</th>
   </tr>
 
-  @foreach($fakulteti as $f)
+  @foreach($fakultets as $f)
     <tr>
       <td>{{ $f->id }}</td>
       <td>{{ $f->naziv }}</td>

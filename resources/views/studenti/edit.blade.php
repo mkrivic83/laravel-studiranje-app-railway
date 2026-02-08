@@ -16,7 +16,7 @@
   </div>
 @endif
 
-<form class="form-box" method="POST" action="{{ route('studenti.update', $student) }}">
+<form class="form-box" method="POST" action="{{ route('students.update', $student) }}">
   @csrf
   @method('PUT')
 

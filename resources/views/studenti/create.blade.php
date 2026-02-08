@@ -16,7 +16,7 @@
   </div>
 @endif
 
-<form class="form-box" method="POST" action="{{ route('studenti.store') }}">
+<form class="form-box" method="POST" action="{{ route('students.store') }}">
   @csrf
 
   <label>Ime</label>

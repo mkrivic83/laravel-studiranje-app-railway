@@ -24,7 +24,7 @@
     <th>Akcije</th>
   </tr>
 
-  @foreach($studenti as $s)
+  @foreach($students as $s)
     <tr>
       <td>{{ $s->id }}</td>
       <td>{{ $s->ime }}</td>
