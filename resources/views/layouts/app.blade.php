@@ -15,8 +15,8 @@
 
       <nav class="nav">
         <a href="{{ url('/') }}" class="nav-link {{ request()->routeIs('home') ? 'active':''}}">Početna</a>
-        <a href="{{ route('studenti.index') }}" class="nav-link {{ request()->routeIs('studenti.index') ? 'active':''}}">Studenti</a>
-        <a href="{{ route('fakulteti.index') }}" class="nav-link {{ request()->routeIs('fakulteti.index') ? 'active':''}}">Fakulteti</a>
+        <a href="{{ route('students.index') }}" class="nav-link {{ request()->routeIs('students.index') ? 'active':''}}">Studenti</a>
+        <a href="{{ route('fakultets.index') }}" class="nav-link {{ request()->routeIs('fakultets.index') ? 'active':''}}">Fakulteti</a>
         <a href="{{ route('about.index') }}" class="nav-link {{ request()->routeIs('about.index') ? 'active':''}}">About</a>
       </nav>
     </div>

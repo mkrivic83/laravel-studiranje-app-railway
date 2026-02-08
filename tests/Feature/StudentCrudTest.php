@@ -37,7 +37,7 @@ class StudentCrudTest extends TestCase
             'fakultetid' => $f->id,
         ]);
 
-        $this->assertDatabaseHas('students', [
+        $this->assertDatabaseHas('studenti', [
             'id' => $student->id,
             'ime' => 'Marko',
             'mjesto' => 'Split',
@@ -61,7 +61,7 @@ class StudentCrudTest extends TestCase
 
         $student->update(['stipendija' => 250.75]);
 
-        $this->assertDatabaseHas('students', [
+        $this->assertDatabaseHas('studenti', [
             'id' => $student->id,
             'stipendija' => 250.75,
         ]);
@@ -84,7 +84,7 @@ class StudentCrudTest extends TestCase
 
         $student->delete();
 
-        $this->assertDatabaseMissing('students', [
+        $this->assertDatabaseMissing('studenti', [
             'id' => $student->id,
         ]);
     }

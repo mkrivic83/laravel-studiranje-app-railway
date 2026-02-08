@@ -13,6 +13,6 @@
 <p><strong>Mjesto:</strong> {{ $student->mjesto }}</p>
 <p><strong>Fakultet:</strong> {{ $student->fakultet?->naziv }} ({{ $student->fakultet?->mjesto }})</p>
 
-<a class="btn" href="{{ route('studenti.index') }}">Natrag</a>
+<a class="btn" href="{{ route('students.index') }}">Natrag</a>
 
 @endsection
