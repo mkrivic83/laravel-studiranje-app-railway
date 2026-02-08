@@ -4,11 +4,6 @@
 node_modules
 vendor
 
-storage/logs
-storage/framework
-storage/app
-
-public/storage
 
 .env
 .env.*
