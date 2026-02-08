@@ -43,7 +43,7 @@ class StudentMiddlewareTest extends TestCase
             'fakultetid' => $f->id,
         ]);
 
-        $response = $this->get(route('studenti.show', $s));
+        $response = $this->get(route('students.show', $s));
         $response->assertStatus(403);
         $response->assertSee('Prikaz studenta nije dozvoljen');
     }
@@ -63,7 +63,7 @@ class StudentMiddlewareTest extends TestCase
             'fakultetid' => $f->id,
         ]);
 
-        $response = $this->get(route('studenti.show', $s));
+        $response = $this->get(route('students.show', $s));
         $response->assertStatus(200);
         $response->assertSee('Ima');
         $response->assertSee('Zagreb');
@@ -84,7 +84,7 @@ class StudentMiddlewareTest extends TestCase
             'fakultetid' => $f->id,
         ]);
 
-        $response = $this->get(route('studenti.show', $student));
+        $response = $this->get(route('students.show', $student));
 
         $response->assertStatus(403);
         $response->assertSee('Prikaz studenta nije dozvoljen');
@@ -105,7 +105,7 @@ class StudentMiddlewareTest extends TestCase
             'fakultetid' => $f->id,
         ]);
 
-        $response = $this->get(route('studenti.show', $student));
+        $response = $this->get(route('students.show', $student));
 
         $response->assertStatus(200);
         $response->assertSee('Vidljiv');
