@@ -8,18 +8,11 @@ use Illuminate\Http\Request;
 
 class StudentController extends Controller
 {
-    //  public function index()
-    // {
-    //     // Ne prikazujemo studente kojima je mjesto null (uz middleware zaštitu za show/edit)
-    //     $studenti = Student::with('fakultet')
-    //         //->whereNotNull('mjesto')
-    //         ->orderBy('prezime')
-    //         ->orderBy('ime')
-    //         //->get();
-    //         ->paginate(5);
-
-    //     return view('studenti.index', compact('studenti'));
-    // }
+    public function __construct()
+    {
+        $this->middleware('student.mjesto')
+            ->only(['show', 'edit', 'update', 'destroy']);
+    }
     public function index(Request $request)
 {
     $perPage = 5;
