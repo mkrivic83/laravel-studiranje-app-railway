@@ -47,7 +47,7 @@ class StudentController extends Controller
     public function create()
     {
         $fakulteti = Fakultet::orderBy('naziv')->get();
-        return view('studenti.create', compact('fakulteti'));
+        return view('students.create', compact('fakulteti'));
     }
 
     public function store(Request $request)
