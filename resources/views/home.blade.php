@@ -22,5 +22,5 @@
 <li>2 testa (svaki ima 3 metode) i prolaze</li>
 </ul>
 
-<p>Deploy test {{ now() }}</p>
+<p>Deploy test {{ now() }} još jedan</p>
 @endsection
