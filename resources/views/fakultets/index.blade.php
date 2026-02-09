@@ -4,7 +4,7 @@
 @section('page_title', 'Popis fakulteta')
 
 @section('content')
-
+<p>Sad je: {{ now() }}</p>
 <table>
   <tr>
     <th>ID</th>
