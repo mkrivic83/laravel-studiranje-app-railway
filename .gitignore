@@ -4,9 +4,10 @@
 .env
 .env.*
 
-storage/logs
-storage/framework/cache
-storage/framework/sessions
-storage/framework/views
+storage/*
+!storage/app
+!storage/framework
+!storage/framework/.gitkeep
 
-bootstrap/cache
+bootstrap/cache/*
+!bootstrap/cache/.gitkeep
