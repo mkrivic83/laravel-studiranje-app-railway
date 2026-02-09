@@ -12,6 +12,7 @@ class FakultetSeeder extends Seeder
      */
     public function run(): void
     {
+        logger('FakultetSeeder started');
         Fakultet::create(['naziv' => 'FER', 'mjesto' => 'Zagreb']);
         Fakultet::create(['naziv' => 'PMF', 'mjesto' => 'Zagreb']);
         Fakultet::create(['naziv' => 'FOI', 'mjesto' => 'Varaždin']);

@@ -13,6 +13,8 @@ class StudentSeeder extends Seeder
      */
     public function run(): void
     {
+        logger('StudentSeeder started');
+        
         $fer = Fakultet::where('naziv', 'FER')->first();
         $pmf = Fakultet::where('naziv', 'PMF')->first();
         $foi = Fakultet::where('naziv', 'FOI')->first();
