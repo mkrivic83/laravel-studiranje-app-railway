@@ -1,16 +1,17 @@
 .git
 .gitignore
 
-node_modules
-vendor
+**/node_modules
+**/vendor
 
 # Laravel runtime
 storage/logs
 storage/app
 
-# (čak i ako ne postoji, OK je)
+# Symlink safety
 public/storage
 
+# Build artefacts
 bootstrap/cache
 
 .env
